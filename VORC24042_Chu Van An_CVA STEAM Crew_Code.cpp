@@ -1,21 +1,30 @@
-#include <stdio.h>
+//Khai báo các thư viện cơ bản của C++
+#include <stdio.h> 
 #include <math.h>
 
 //Khai báo thư viện Arduino PCA9685
 #include <Wire.h> //thư viện I2c của Arduino, do PCA9685 sử dụng chuẩn giao tiếp i2c nên thư viện này bắt buộc phải khai báo 
 #include <Adafruit_PWMServoDriver.h> // thư viện PCA9685
 
-//Xác định các chân động cơ
+//Xác định các chân động cơ:
+//Đối với các motor không phải là servo cần 2 cổng PCA9685
 
-#define daytrai 2
-#define dayphai 3
-#define nang1 8
+//Cơ cấu đẩy
+#define daytrai 2 
+#define dayphai 3 
+
+//Cơ cấu nâng
+#define nang1 8 
 #define nang0 9
-#define lay1 10
+
+//Cơ cấu thu
+#define lay1 10 
 #define lay0 11
-#define dcphai1 12
+
+//Cơ cấu di chuyển
+#define dcphai1 12 
 #define dcphai0 13
-#define dctrai1 14
+#define dctrai1 14 
 #define dctrai0 15
 
 Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver(); //Khởi tạo class của thư viện với địa chỉ gốc
